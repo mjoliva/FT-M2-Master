@@ -1,29 +1,26 @@
 // Código de Nav acá
+
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .flex(column, center, none);
     background-color: @wild-sand;
     margin-bottom: 2px;
     border-color: @sea-shell;
     font-weight: bolder;
 
     h1 {
-        color: @ebony-clay;
+        .color(@ebony-clay);
         padding: 10px;
         font-size: 3.4em;
     }
 
     ul {
-        display: flex;
-        flex-direction: row;
+        .flex(row, none, space-evenly);
         width: 50%;
-        justify-content: space-evenly;
         padding: 4px;
 
         li {
             a {
-                color: @river-bend;
+                .color(@river-bend);
                 text-decoration: none;
                 font-size: 15px;
             }
