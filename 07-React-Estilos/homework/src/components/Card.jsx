@@ -1,4 +1,7 @@
-export default function Card(props){
+import React from 'react';
+
+export default function Card(props) {
+  // acá va tu código
   function onClose(){
     return alert(props.name)
   }
@@ -26,4 +29,4 @@ export default function Card(props){
         </div>
       </div>
     )
-}
+};
