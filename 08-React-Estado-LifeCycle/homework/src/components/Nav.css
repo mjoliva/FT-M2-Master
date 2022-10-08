@@ -1,3 +1,27 @@
+
+
+.menuBar {
+  width: 100%;
+  background-color: grey;
+}
+
+.flexContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgContainer{
+  width: 15%;
+  padding: 5px;
+}
+.navSpan{
+  position: relative; 
+  left: -33%; 
+  color: aliceblue;
+  font-size: 18px;
+}
 #logoHenry {
-  margin-right: 20px;
+  width: 30px;
+  height: 30px;
 }
