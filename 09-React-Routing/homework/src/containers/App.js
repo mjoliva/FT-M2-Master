@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
 
 import './App.css';
 import Nav from '../components/Nav.jsx';
+import  About from "../components/About.jsx";
 import Cards from '../components/Cards.jsx';
 
-const apiKey = 'Aqui va la API key que creaste';
+
+const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -36,24 +39,33 @@ function App() {
         }
       });
   }
-  function onFilter(ciudadId) {
+  /*function onFilter(ciudadId) {
     let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
     if(ciudad.length > 0) {
         return ciudad[0];
     } else {
         return null;
     }
-  }
+  }*/
   return (
     <div className="App">
       <Nav onSearch={onSearch}/>
-      <div>
-        <Cards
-          cities={cities}
-          onClose={onClose}
-        />
-      </div>
+      
       <hr />
+
+      <Routes>
+        <Route  
+          path='/' 
+          element= {<Cards 
+                        cities={cities}
+                        onClose={onClose}
+                    />}
+        />
+        <Route 
+          element= {<About numero={5345} />}
+        />
+      </Routes>
+    
     </div>
   );
 }
